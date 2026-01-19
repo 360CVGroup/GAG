@@ -1,0 +1,1557 @@
+[
+    {
+        "type": "text",
+        "text": "HIGH DURABILITY OF ASAHI KASEI ACIPLEX™ MEMBRANE",
+        "text_level": 1,
+        "bbox": [
+            202,
+            66,
+            794,
+            87
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "N. Miyake, M. Wakizoe, E. Honda and T. Ohta",
+        "bbox": [
+            308,
+            114,
+            687,
+            133
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Asahi Kasei Chemicals Corporation",
+        "bbox": [
+            354,
+            138,
+            642,
+            156
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "1-3-1 Yakoh, Kawasaki city, Japan 210-0863",
+        "bbox": [
+            320,
+            161,
+            676,
+            179
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "ABSTRACT",
+        "text_level": 1,
+        "bbox": [
+            442,
+            207,
+            553,
+            223
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "In our last paper it had been implied that the presence of Pt on the cathode was more essential for membrane degradation. In this paper both effluent analysis and X-ray CT study have been done for the further understanding of membrane degradation. These studies support that the presence of Pt on the cathode is more essential for membrane degradation. Second purpose of this paper is to report the influence of electrocatalyst, GDL and types of membranes on membrane durability at open circuit voltage, i.e. OCV. It was confirmed that membrane was much less degraded on OCV test when using \"Asahi Kasei Advanced Membrane\" or using Pt:Co alloy as electrocatalyst. These results imply that the problem of membrane degradation during higher cell temperature operation under low humidification can be overcome by the further improvement of both membrane and electrocatalyst.",
+        "bbox": [
+            173,
+            252,
+            823,
+            521
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "INTRODUCTION",
+        "text_level": 1,
+        "bbox": [
+            416,
+            570,
+            578,
+            585
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Asahi Kasei has been developing and producing perfluorinated ionomer membrane since started R&D for Chlor-Alkali Electrolysis in 1966. Asahi Kasei had built the  $1^{\\text{st}}$  \"Ion Exchange Membrane Chlor-Alkali Plant\" in the world, and established the complete process from monomer synthesis to perfluorinated membrane, called \"Asahi Kasei Aciplex™ Membrane\". In 1991, Asahi Kasei has started corporate R&D for PEFC application and joined NEDO PEFC Project since 1992.",
+        "bbox": [
+            140,
+            614,
+            854,
+            747
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Asahi Kasei started to develop \"Thermo-Stable Membrane\" suitable for higher cell temperature operation up to  $120^{\\circ}\\mathrm{C}$  and also lower humidified condition [1]. \"Thermo-Stable Membrane\" is based on perfluorocarbon material, which has  $20\\sim 30^{\\circ}\\mathrm{C}$  higher Tg than conventional membranes, in order to satisfy both performance and durability.",
+        "bbox": [
+            140,
+            752,
+            854,
+            861
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Asahi Kasei also developed \"Highly Durable Membrane\" with high physical properties and stable dimension property from the view points of the polymerization and film formation process. Based on these technologies, \"Combined Membrane\" has been",
+        "bbox": [
+            140,
+            866,
+            854,
+            930
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006) 10.1149/1.2214558, copyright The Electrochemical Society",
+        "bbox": [
+            294,
+            11,
+            702,
+            41
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.-134.62address. Redistribution subject to ECS249ms of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            972,
+            942,
+            986
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "developed in 2003.",
+        "bbox": [
+            140,
+            70,
+            294,
+            88
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In addition to these developments, Asahi Kasei has made some studies for improvement of membrane durability at higher cell temperature under low humidification. One is to understand membrane degradation mechanism and the other is to develop the accelerating method for membrane durability. In our last paper it had been reported that humidified condition and cell temperature significantly affect membrane durability on OCV test [2]. Also, it had been implied that the presence of Pt on the cathode was more essential for membrane degradation. Membrane degradation mechanism had been considered to explain these experimental results. Moreover, OCV test was proved to be an effective accelerating method to screen experimental membranes. Based on these studies, Asahi Kasei Advanced Membrane has been developed as extremely durable membrane for higher cell temperature operation under low humidification.",
+        "bbox": [
+            140,
+            93,
+            854,
+            338
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In this paper, both effluent analysis and X-ray CT study have been done for the further understanding of membrane degradation. Effluent samples were collected and analyzed for measuring fluoride release. Degraded membrane samples after OCV test were morphologically analyzed using X-ray CT system. Based on these results, further consideration for membrane degradation has been done. Second purpose of this paper is to report the influence of electrocatalyst, GDL and types of membrane on membrane durability.",
+        "bbox": [
+            140,
+            343,
+            854,
+            498
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "EXPERIMENTAL",
+        "text_level": 1,
+        "bbox": [
+            419,
+            523,
+            584,
+            542
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "\"Asahi Kasei Aciplex™ Membrane\" was used for OCV tests as follows. A membrane sample was sandwiched by two E-TEK ELAT electrodes with  $0.4\\mathrm{mg/cm}^2$  Pt in the single cell. The cells were run at OCV. Pure hydrogen gas was fed into the anode, and pure air or nitrogen was fed into the cathode, with or without humidification.",
+        "bbox": [
+            140,
+            569,
+            854,
+            657
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "After every operation, the cells were released from the test station in order to measure  $\\mathrm{H}_2$  gas permeability. Measurements of  $\\mathrm{H}_2$  gas permeability were made using GTR-100FA (GTR TEC CO.) based on gas chromatography [3]. Dry Ar gas was fed into the cathode at a pressure of  $0.1\\mathrm{MPa}$  while feeding dry  $\\mathrm{H}_2$  into the anode at a pressure of  $0.15\\mathrm{MPa}$ . The cell temperature was kept at  $80^{\\circ}\\mathrm{C}$ .",
+        "bbox": [
+            140,
+            661,
+            854,
+            771
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Both anode and cathode effluent samples were collected during cell operation. An ion selective electrode (Thermo Orion Co., 9609BN ionplus™) was used for the fluoride analysis of effluent samples.",
+        "bbox": [
+            140,
+            775,
+            854,
+            839
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Degraded membrane samples after OCV test were morphologically analyzed using X-ray CT system (SHIMADZU Co., SMX-100CT). After searching the signs of membrane degradation in the entire area by X-ray Transmission, X-CT analysis has been done where there were some signs of membrane degradation.",
+        "bbox": [
+            140,
+            843,
+            854,
+            930
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            637,
+            26
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS260ms of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            972,
+            942,
+            986
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "RESULTS AND DISCUSSION",
+        "text_level": 1,
+        "bbox": [
+            364,
+            92,
+            632,
+            109
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Influence of Electrode on Membrane Durability",
+        "bbox": [
+            140,
+            138,
+            524,
+            157
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The influence of electrode on membrane durability on OCV test was reported in the last paper, as shown in Fig.1. By comparing \"No Elat\", which is carbon cloth on both sides, with others, it was implied that Pt is necessary for membrane degradation. Moreover by comparing \"Elat on both sides\" or \"Cathode only\" with others, the presence of Pt on the cathode appears to be essential for membrane degradation.",
+        "bbox": [
+            140,
+            161,
+            854,
+            271
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Fig.2 shows the influence of electrode on fluoride release in cathode effluent on OCV test. Fluoride release from cathode effluent is increased in case of the presence of Pt on the cathode, such as \"Elat on both sides\" and \"Cathode only\". The same trend was observed in anode effluent. Effluent analysis supports that the presence of Pt on the cathode is more essential for membrane degradation.",
+        "bbox": [
+            140,
+            275,
+            854,
+            383
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The samples after OCV test were morphologically analyzed by X-ray CT system. Fig.3 is the case of \"No Elat\". Slight wrinkles of membrane were observed in the upper and the lower area, but no signs of degradation were found on the membrane.",
+        "bbox": [
+            140,
+            388,
+            836,
+            452
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "In Fig.4 the case of \"Anode Only\" is shown. Pinhole through membrane and anode was observed in ⑤. Membrane became thinner where it wrinkled in ③, ④, ⑤. No signs of degradation were found else.",
+        "bbox": [
+            140,
+            455,
+            854,
+            520
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Fig.5 shows the case of \"Cathode Only\". Surprisingly the voids were observed inside the membrane in ②. Also, Membrane became thinner where it wrinkled in ③. Comparing Fig.4 with Fig.5, membrane appears to be more severely degraded in the case of \"Cathode Only\" than in the case of \"Anode Only\".",
+        "bbox": [
+            140,
+            523,
+            854,
+            611
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The case of \"Elat on Both sides\" is shown in Fig.6. It was observed that membrane was severely wrinkled and torn, such as ③ and ④, in the entire area.",
+        "bbox": [
+            140,
+            614,
+            849,
+            656
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The result of X-ray CT analysis supports that the presence of  $\\mathrm{Pt}$  on the cathode is more essential for membrane degradation than the presence of  $\\mathrm{Pt}$  on the anode.",
+        "bbox": [
+            140,
+            661,
+            836,
+            702
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Influence of GDL on Membrane Durability",
+        "bbox": [
+            140,
+            729,
+            491,
+            748
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The influence of GDL on membrane durability on OCV test was shown in Fig.7. Two types of GDL were purchased from E-TEK and evaluated on OCV test. It was confirmed that membrane durability was not influenced by GDL.",
+        "bbox": [
+            140,
+            752,
+            854,
+            816
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Influence of Electrocatalyst on Membrane Durability",
+        "bbox": [
+            140,
+            843,
+            566,
+            861
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The influence of electrocatalyst on membrane durability on OCV test was shown in Fig.8. In spite of the same Pt loading, the higher durability is obtained when using the electrode having  $30\\mathrm{wt}\\%$  Pt on Vulcan XC-72, compared to  $20\\mathrm{wt}\\%$  Pt on Vulcan XC-72.",
+        "bbox": [
+            140,
+            866,
+            854,
+            930
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            637,
+            26
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS™s of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            972,
+            942,
+            986
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Also using the electrode having Pt:Co alloy (1:1 a/o) on Vulcan XC-72 leads to much higher durability. This result reveals that types of electrocatalyst clearly influence membrane durability on OCV test.",
+        "bbox": [
+            140,
+            70,
+            854,
+            133
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Fig.9 shows the influence of electrocatalyst on fluoride release in cathode effluent on OCV test. Fluoride release in cathode effluent is influenced by types of electrocatalyst. Especially Fluoride release is decreased when Pt:Co alloy replaces Pt. The same trend was observed in anode effluent. This result supports that membrane is less degraded when using Pt:Co Alloy as electrocatalyst.",
+        "bbox": [
+            140,
+            138,
+            854,
+            247
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "As shown in Fig.10, X-ray CT analysis has been also conducted for the sample after OCV test when Pt:Co alloy was used as the electrocatalyst. Membrane was thinning where it wrinkled in ⑧, but no sign of membrane degradation was found else. Therefore X-ray CT analysis also supports that membrane is less degraded in case of Pt:Co Alloy as the electrocatalyst.",
+        "bbox": [
+            140,
+            252,
+            849,
+            362
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Membrane Degradation Mechanism",
+        "text_level": 1,
+        "bbox": [
+            140,
+            388,
+            431,
+            406
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "A. B. LaConti et al. reported \"Chemical Degradation Mechanism\" that the membrane is attacked by hydrogen peroxide radicals [4]. Hydrogen peroxide radicals are produced by the reaction of cross-leaked  $\\mathrm{O}_2$  with  $\\mathrm{H}_2$  chemisorbed on Pt catalyst of the anode as follows.",
+        "bbox": [
+            140,
+            411,
+            854,
+            497
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Step 1:  $\\mathrm{H}_2\\rightarrow 2\\mathrm{H}\\bullet$  (on Pt catalyst)",
+        "bbox": [
+            140,
+            525,
+            416,
+            542
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Step 2:  $\\mathrm{H}\\bullet +\\mathrm{O}_2$  (cross-leaked through membrane)  $\\rightarrow \\mathbf{HO}_2\\bullet$",
+        "bbox": [
+            140,
+            547,
+            622,
+            566
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Step 3:  $\\mathbf{HO}_2\\bullet +\\mathrm{H}\\bullet \\rightarrow \\mathrm{H}_2\\mathrm{O}_2$  (which can diffuse into the membrane)",
+        "bbox": [
+            140,
+            570,
+            683,
+            588
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Step 4:  $\\mathrm{H}_2\\mathrm{O}_2 + \\mathrm{M}^{2+}$  ( $\\mathrm{Fe}^{2+}$ ,  $\\mathrm{Cu}^{2+}$  etc)  $\\rightarrow \\mathrm{M}^{3+}$  +  $\\bullet \\mathrm{OH} + \\mathrm{OH}^-$",
+        "bbox": [
+            140,
+            589,
+            601,
+            611
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Step 5:  $\\bullet \\mathrm{OH} + \\mathrm{H}_2\\mathrm{O}_2 \\rightarrow \\mathrm{H}_2\\mathrm{O} + \\mathbf{HO}_2\\bullet$  (hydrogen peroxide radical attacks the membrane)",
+        "bbox": [
+            140,
+            614,
+            843,
+            635
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "On the other hand, other recent paper reported that  $\\mathrm{H}_2\\mathrm{O}_2$  formation is not experimentally observed at higher potential above 0.8V [5]. This means that such chemical degradation is unlikely to occur from the cathode side at OCV. Thus, our experimental results, which show that membrane degradation occurs more dominantly from the cathode side than from the anode side, cannot be reasonably explained only by \"Chemical Degradation Mechanism\".",
+        "bbox": [
+            140,
+            661,
+            854,
+            792
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Therefore we had proposed \"Thermal Decomposition Mechanism\" by combustion heat in the last paper [2]. The membrane can be decomposed or oxidized thermally by the combustion heat, which is derived from the reaction of cross-leaked  $\\mathrm{H}_{2}$  with  $\\mathrm{O}_{2}$  on Pt catalyst of the cathode. However small the combustion heat is, it may lead to the gradual damage to the membrane microscopically. Membrane degradation can also occur from the anode side by the combustion heat, which is derived by the reaction of cross-leaked",
+        "bbox": [
+            140,
+            797,
+            854,
+            930
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            637,
+            26
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS©s of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            972,
+            942,
+            986
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "$\\mathrm{O}_2$  with  $\\mathrm{H}_2$  on Pt catalyst. With high humidification surplus liquid water may cool the combustion heat to avoid membrane degradation. Such \"Thermal Decomposition Mechanism\" by combustion heat could have explained our experimental results more reasonably than \"Chemical Degradation Mechanism\" in the last paper.",
+        "bbox": [
+            140,
+            70,
+            854,
+            157
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Thus, \"Thermal Decomposition Mechanism\" by combustion heat should have explained severe membrane degradation in case of the presence of Pt on the cathode. However, \"Thermal Decomposition Mechanism\" cannot explain the influence of electrocatalyst, which revealed membrane durability became much higher when \"Pt:Co alloy (1:1 a/o)\" replaced \"Pt\" as the electrocatalyst. Generated combustion heat should not be altered by replacing Pt with Pt:Co alloy. Further study and consideration are needed for membrane degradation mechanism.",
+        "bbox": [
+            140,
+            161,
+            854,
+            316
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Durability of Asahi Kasei Aciplex™ Membranes",
+        "text_level": 1,
+        "bbox": [
+            140,
+            340,
+            534,
+            362
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Next, we tried to screen experimental membranes by OCV test as follows. Table 1 shows the specifications of these experimental membranes evaluated on OCV test. \"Advanced Membrane\" is newly designed and developed based on novel polymer composite and modifying both polymerization and film formation process.",
+        "bbox": [
+            140,
+            364,
+            854,
+            452
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "table",
+        "img_path": "images/59e066bef2541ade2e8406938661542808ea5d7d33a6f8c9ff8663a65a61d61f.jpg",
+        "table_caption": [
+            "Table 1: List of Evaluated Membranes"
+        ],
+        "table_footnote": [],
+        "table_body": "<table><tr><td>Membrane</td><td>EW( g/ eq)</td><td>Thickness( μ m)</td><td>Remarks</td></tr><tr><td>Advanced Membrane</td><td>780-900</td><td>50</td><td>Novel Polymer Composite, \nPolymerization, \nFilm Formation Process</td></tr><tr><td>Thermo-stable Membrane</td><td>710</td><td>50</td><td>Novel Polymer</td></tr><tr><td>S1002</td><td>950</td><td>50</td><td>Conventional Membrane</td></tr></table>",
+        "bbox": [
+            142,
+            508,
+            867,
+            680
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "As shown in Fig.11, \"Advanced Membrane\" has the higher Tg and the stronger modulus than other membranes. \"Advanced Membrane\" also has the lower equivalent weight to keep the good performance.",
+        "bbox": [
+            140,
+            703,
+            839,
+            767
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Fig.12 shows membrane durability of each membrane on OCV test. \"Advanced Membrane\" definitely shows the excellent durability compared to other membranes.",
+        "bbox": [
+            140,
+            771,
+            854,
+            813
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Fluoride release in cathode effluent when using each membrane is also shown in Fig.13. Fluoride release is significantly decreased when using \"Advanced Membrane\", compared to other membranes. The same trend was also observed in anode effluent. Effluent analysis supports that \"Advanced Membrane\" is much less degraded on OCV test.",
+        "bbox": [
+            140,
+            816,
+            854,
+            925
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            637,
+            26
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS 63ms of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            972,
+            942,
+            986
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "X-ray CT analysis has been also conducted for \"Advanced Membrane\" after OCV test, as shown in Fig.14. No sighs of membrane degradation were found in all cases, \"Elat on both sides\", \"Anode Only\" and \"Cathode Only\". As shown before in Figs.4~6, severe membrane degradation was found when using \"Thermo-stable Membrane\". By the comparison among these cases, X-ray CT analysis also supports that \"Advanced Membrane\" is much less degraded on OCV test.",
+        "bbox": [
+            140,
+            70,
+            852,
+            202
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Our customer has been operating the cell, which installed \"Advanced Membrane\" at  $90^{\\circ}\\mathrm{C}$  under low humidification. In spite of higher cell temperature under low humidification, the cell has been stably operated over 13000hrs. Fluoride release has been still quite low over 13000hrs. The evaluated result of Advanced Membrane by a customer reveals that OCV test can be utilized as an effective accelerating method to evaluate membrane durability.",
+        "bbox": [
+            140,
+            205,
+            854,
+            338
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "These experimental results imply that the problem of membrane degradation during higher cell temperature operation under low humidification can be overcome by the improvement of both membrane and electrocatalyst.",
+        "bbox": [
+            140,
+            343,
+            852,
+            407
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "ACKNOWLEDGEMENT",
+        "text_level": 1,
+        "bbox": [
+            385,
+            433,
+            609,
+            450
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "This study was partially supported by the New Energy and Industrial Technology Development Organization (NEDO)",
+        "bbox": [
+            140,
+            479,
+            836,
+            521
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "REFERENCES",
+        "text_level": 1,
+        "bbox": [
+            429,
+            547,
+            568,
+            565
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "list",
+        "sub_type": "ref_text",
+        "list_items": [
+            "1. M. Wakizoe et al., 2003 Fuel Cell Seminar Abstracts, 764 (2003).",
+            "2. N. Miyake et al., Abstract 1880,  $206^{\\mathrm{th}}$  ECS Meeting, Honolulu, HA (2004).",
+            "3. M. Sugimoto et al., Membrane, 27(2), 101 (2002).",
+            "4. A. B. LaConti, M. Hamdan and R. C. McDonald, in Handbook of Fuel Cells, H. A. Gasteiger, A. Lamm, Editors, Vol.3, p.648, John Wiley & Sons, New York (2003).",
+            "5. M. Inaba at al., Abstract 1885,  $206^{\\mathrm{th}}$  ECS Meeting, Honolulu, HA (2004)."
+        ],
+        "bbox": [
+            140,
+            592,
+            820,
+            724
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            637,
+            26
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS264ns of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            973,
+            942,
+            984
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "image",
+        "img_path": "images/f47eaa8e01a3f2e316269a9efcbdcd547e58de78a36041930873e501d0c4c567.jpg",
+        "image_caption": [
+            "Fig.1 Influence of Electrode on Membrane Durability on OCV test"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            194,
+            78,
+            789,
+            429
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/72cdf39694500c7218614da60f04631946fcaaab520c3027ea3da4bcbe082175.jpg",
+        "image_caption": [
+            "Fig.2 Influence of Electrode on Membrane Durability on OCV test"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            197,
+            520,
+            795,
+            883
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            635,
+            26
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS265ms of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            973,
+            942,
+            986
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "image",
+        "img_path": "images/13f5bfc10b5795b83821dc674afcc245a46d22e87df8cc1c3a1399f700ea1295.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            148,
+            74,
+            400,
+            251
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/b6b89b357d54436583f1478556b030b7b4925ff551b47aabd69a287f02af7dfd.jpg",
+        "image_caption": [
+            "①"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            436,
+            104,
+            627,
+            242
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/08c11f2ca562a2a6295df045db0b820ef289b9e376d8d6a37331f7b83b1383df.jpg",
+        "image_caption": [
+            "< X-ray Transmission Image >",
+            "(2)"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            643,
+            104,
+            833,
+            241
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "- Slight wrinkle of membrane was observed in the upper and the lower area.",
+        "bbox": [
+            156,
+            292,
+            385,
+            351
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "No signs of degradation were found on the membrane.",
+        "bbox": [
+            158,
+            358,
+            379,
+            395
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/50517409006621aeb7441e029b1cbe2afc553dbed4d938ccc773db45983720b2.jpg",
+        "image_caption": [
+            "①"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            434,
+            277,
+            624,
+            422
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/1c0f8dffb55146a93d152f59aa6e1d38d57ce006c4124ae9284c20845869d28c.jpg",
+        "image_caption": [
+            "(2)",
+            "Fig.3 X-ray CT Analysis after OCV test in case of \"No Elat\""
+        ],
+        "image_footnote": [],
+        "bbox": [
+            643,
+            279,
+            833,
+            422
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/d1a63aed5969292226dd2195b5fd1cae9a1f59085b3e7aa21ff9d52aa30b99e4.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            163,
+            532,
+            401,
+            705
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/f0977f00ebe6d7102f3271afe73be1f52f16e76f8b3e4f7a69a4998c7033e6d8.jpg",
+        "image_caption": [
+            "< X-ray Transmission Image >"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            424,
+            545,
+            607,
+            691
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/2ecf599a4bb82f28a191e9c423615472e4abc4f69c7793fb6d90d7f20b186354.jpg",
+        "image_caption": [
+            "$<  \\mathrm{X}$  -rayCTImage>"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            635,
+            542,
+            818,
+            696
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Pinhole through membrane and anode was observed in ⑤.",
+        "bbox": [
+            163,
+            729,
+            392,
+            767
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "- Membrane became thinner (around  $5\\mu \\mathrm{m}$ ) where it wrinkled in ③, ④, ⑤.",
+        "bbox": [
+            163,
+            772,
+            359,
+            830
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "No signs of degradation were found else.",
+        "bbox": [
+            163,
+            835,
+            377,
+            872
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/02b592ad8e9936385422a937b3b86d6dd0c77e2ac065fe20ba9718b7b3b5cf06.jpg",
+        "image_caption": [
+            "Fig.4 X-ray CT Analysis after OCV test in case of \"Anode Only\""
+        ],
+        "image_footnote": [],
+        "bbox": [
+            411,
+            708,
+            826,
+            873
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            637,
+            26
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS® of use (see ecsdl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            972,
+            944,
+            986
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "image",
+        "img_path": "images/37a6101a5360724500e878dded3f63a9b8a07ef3389ee80da76555d05e03b824.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            163,
+            70,
+            415,
+            218
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "- Voids were observed inside the membrane in ②.",
+        "bbox": [
+            174,
+            227,
+            405,
+            265
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "- Membrane became thinner (around  $5\\mu \\mathrm{m}$ ) where it wrinkled in ③.",
+        "bbox": [
+            178,
+            270,
+            372,
+            328
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Membrane appears to be more severely degraded than the case of anode only.",
+        "bbox": [
+            169,
+            354,
+            392,
+            412
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/28900cdd62d3a62312b28e7cbac275179ec49fe5698b385926e3541e22a2029d.jpg",
+        "image_caption": [
+            "< X-ray Transmission Image >"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            437,
+            99,
+            620,
+            232
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/55a0a233c176dbea54cdd5651a992c384282a27a427d1e4adb2565125fcfb8ff.jpg",
+        "image_caption": [
+            "(3)"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            640,
+            99,
+            823,
+            229
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/2e3ce2cec3b9f2e1e9f0cc0b3e68d290f3df77c608d68d36e206fa73dd7c4418.jpg",
+        "image_caption": [
+            "(2)"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            441,
+            273,
+            624,
+            412
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/acb75f9a9343cfc1276255d7963daa2e2ce6590c3abf9cb372cc9b2fb75f39bf.jpg",
+        "image_caption": [
+            "$<  \\mathrm{X}$  -ray CT Image  $>$",
+            "(3)"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            645,
+            273,
+            828,
+            412
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/49e4f33bf5a96c94fa695dc15334c9f797416680673fd1aeabf3251c7fb49eaa.jpg",
+        "image_caption": [
+            "Fig.5 X-ray CT Analysis after OCV test in case of \"Cathode Only\""
+        ],
+        "image_footnote": [],
+        "bbox": [
+            166,
+            512,
+            413,
+            665
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "It was observed that membrane severely wrinkled and torn off, such as  $③$  and  $④$ , in the entire area.",
+        "bbox": [
+            165,
+            681,
+            400,
+            758
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/094f52558d8ca6a6670ce0c2f075231e06f714fd986b96ffa982a8f7d9c14c3d.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            287,
+            765,
+            295,
+            780
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "The result of X-ray CT analysis supports that the presence of Pt on the cathode is essential for membrane degradation.",
+        "bbox": [
+            165,
+            787,
+            410,
+            868
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/5b05679fb2471b82f75a7157568978a36fb4d68f844fa4b727d222452e3ebd68.jpg",
+        "image_caption": [
+            "③"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            433,
+            542,
+            616,
+            672
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/bad55e147d421d487edea0b5ca4ef86c1c44898093c4d9cebbc7cb65fba1d33c.jpg",
+        "image_caption": [
+            "< X-ray Transmission Image >",
+            "$④$"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            645,
+            542,
+            826,
+            672
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/23584b1d6bd2d5b5455c7d0990e7f25bb6d5b65f3030f79a03151361dc571d25.jpg",
+        "image_caption": [
+            "(3)",
+            "<X-ray CT Image>",
+            "Fig.6 X-ray CT Analysis after OCV test in case of \"Elat on Both Sides\""
+        ],
+        "image_footnote": [],
+        "bbox": [
+            433,
+            717,
+            616,
+            857
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/a39d030af0403b1ca64f2724a30a3950b1c14fdfb6dd9a1b7bc2ed33d8e06f1c.jpg",
+        "image_caption": [
+            "(4)"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            645,
+            717,
+            828,
+            857
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            637,
+            26
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS©™s of use (see ecsdl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            973,
+            944,
+            986
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "image",
+        "img_path": "images/ea0c9c101d3580a8e22facec61f209db2a7d2601e08c0c9495f275e1f80348a6.jpg",
+        "image_caption": [
+            "Fig.7 Influence of GDL on Membrane Durability on OCV test"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            205,
+            80,
+            787,
+            445
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/1a16ef87917b04f825c2083aff483d58a1079b17598feab96ab483d636eac89a.jpg",
+        "image_caption": [
+            "Fig.8 Influence of Electrocatalyst on Membrane Durability on OCV test"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            194,
+            537,
+            787,
+            887
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            635,
+            26
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS268ns of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            973,
+            942,
+            986
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "image",
+        "img_path": "images/201d5cf8357e87f4c5698fffbce89167731ac6a5c64ac392149e986b0b2a388a.jpg",
+        "image_caption": [
+            "Fig.9 Influence of Electrocatalyst on Fluoride Release on OCV test"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            197,
+            84,
+            799,
+            441
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/9b440babf089568cf6d35f4b32720e6f74c50d5983a5818cc41ef9cac2836d2d.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            163,
+            521,
+            434,
+            686
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/0d86bd3f5089746923e5fa7940d78c4aaa23ec2077febaccefa5545221a6b470.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            439,
+            521,
+            852,
+            695
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/91bc761e9f8eb810562943f409662431b0c7d3ae84b209fa7ad08a3624db2b8c.jpg",
+        "image_caption": [
+            "Fig.10 X-ray CT Analysis after OCV test in case of Pt:Co Alloy"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            163,
+            698,
+            434,
+            875
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/9e99752aab2dad73d7da57acf7296191d7e82d39ada2f8f330bb37d7896771fc.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            439,
+            698,
+            852,
+            875
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            635,
+            26
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS® of use (see ecdsl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            973,
+            942,
+            986
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "image",
+        "img_path": "images/334d3b1a03d13df8d86b33f5aaec0e6ea1a2ab78f19760de683988fc36b5fb9d.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "bbox": [
+            271,
+            88,
+            684,
+            262
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/ca06bafdbbacc1244aad816c8da085bcbc7970722b8da88a3150dbc491615f52.jpg",
+        "image_caption": [
+            "Fig.11 Tg and Modulus of Evaluated membranes"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            233,
+            268,
+            686,
+            474
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/b4b640302c1a2b868d2a16327d798e3c6d59b639058920322b9af9947cd1bcb1.jpg",
+        "image_caption": [
+            "Fig.12 Durability of Asahi Kasei Advanced Membrane"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            222,
+            537,
+            777,
+            875
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            635,
+            26
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to ECS261ms of use (see ecsdl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            973,
+            942,
+            986
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "image",
+        "img_path": "images/266d7759e2c3079911d78ed60cb1f318452be89a47a8a4619b7dd1106237bf82.jpg",
+        "image_caption": [
+            "Fig.13 Fluoride Release of Asahi Kasei AciplexTM Membrane on OCV test"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            202,
+            70,
+            785,
+            431
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "image",
+        "img_path": "images/9eaad999dfcd31f914f4789d9233ac7bf56ff2c4b2ef46cb2658670da0a19272.jpg",
+        "image_caption": [
+            "Fig.14 X-ray CT Analysis After OCV Test in case of Advanced Membrane"
+        ],
+        "image_footnote": [],
+        "bbox": [
+            155,
+            494,
+            839,
+            869
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "header",
+        "text": "ECS Transactions, 1 (8) 249-261 (2006)",
+        "bbox": [
+            359,
+            11,
+            635,
+            26
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "footer",
+        "text": "Downloaded on 2015-05-09 to IP 134.117.10.200 address. Redistribution subject to EC:6ms of use (see ecsdl.org/site/terms_use) unless CC License in place (see abstract).",
+        "bbox": [
+            37,
+            973,
+            941,
+            986
+        ],
+        "page_idx": 12
+    }
+]

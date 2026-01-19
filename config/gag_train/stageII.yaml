@@ -1,0 +1,35 @@
+## data
+train_file: /home/jovyan/lirongji-2/projection/paper/acl_paper_for_supplementary_materials/GAG/saves/train_dataset_background_embedding/Adjuvant_QA_with_answer_embeddding_different_layers.pkl
+max_seq_length: 2048
+# retrieval_context_length: 2048
+preprocessing_num_workers: 32
+overwrite_cache: false
+
+## model
+model_name_or_path: /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/train_mlp_8_15/models/Qwen3-8B
+chat_format: qwen3
+
+## train
+task_type: finetune
+workdir: .
+learning_rate: 6.0e-3
+lr_scheduler_type: linear
+warmup_ratio: 0.03
+weight_decay: 0.0
+num_train_epochs: 5
+use_flash_attn: true
+alpha_nll: 1.0
+clip_grad_norm: -1.0
+seed: 980406
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 4   ## assume there are 6 GPUs
+update_projector_only: true
+embed_key: layer_minus4_answer_tokens_embedding
+
+## logging
+logging_steps: 5
+project_name: GAG
+exp_name: train_mlp_only_last_background_token_fourth_to_last_layer
+checkpointing_steps: "200" ## string number or epoch
+
+

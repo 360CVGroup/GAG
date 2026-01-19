@@ -1,0 +1,14 @@
+# data_path: /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/train_mlp_8_15/get_small_model_answer_tokens_embedding/output_files/Adjuvant_QA_unimodal_withoutocr_pure_QA_shuffle_with_id_1_with_answer_embeddding.pkl
+data_path: /home/jovyan/lirongji-2/projection/paper/acl_paper_for_supplementary_materials/GAG/saves/oracle_gag_dev_data/Adjuvant_benchmark_with_answer_embeddding_different_layers.pkl
+
+# output_file_path: /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/train_mlp_8_15/src/eval/results/Adjuvant_QA_unimodal_withoutocr_pure_QA_shuffle_with_id_1_with_answer_embeddding_with_qwen3-8B_answer.jsonl
+output_file_path: /home/jovyan/lirongji-2/projection/paper/acl_paper_for_supplementary_materials/GAG/saves/oracle_gag_dev_data/Adjuvant_benchmark_with_answer_embeddding_with_qwen3-8B_answer.jsonl
+
+model_name_or_path: /home/jovyan/lirongji/wandb_save/wandb/run-20251212_234807-28cdrbjx/files/checkpoint/step_400/full_weight
+
+eval_batch_size: 4
+embed_key: layer_minus4_answer_tokens_embedding
+# max_test_samples: 20
+
+# python -m src.eval.oracle_gag.run_eval \
+#         --config config/oracle_gag_eval/run_eval_oracle.yaml

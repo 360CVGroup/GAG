@@ -1,0 +1,50 @@
+data_path: /home/jovyan/lirongji-2/projection/paper/acl_paper_for_supplementary_materials/GAG/data/gag_eval/general_and_adjuvant_mini.jsonl
+output_file_path: /home/jovyan/lirongji-2/projection/paper/acl_paper_for_supplementary_materials/GAG/saves/gag_dev_data/2_mixed_domains_gag_eval_result.jsonl
+
+router_encoder_name_or_path: /home/jovyan/lirongji-2/models/Qwen3-1.7B
+router_max_seq_length: 1024
+router_device: cuda:1 # cpu      # ★ 新增：强制路由在 CPU 上跑   # cuda:1
+# 新增：每个领域各用哪个 GPU
+general_device: cuda:0
+adjuvant_device: cuda:0
+material_device: cuda:1
+prototype_files:
+  general:  /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/gate_weight/qwen3_1_7B_version/general_prototypes.pt
+  adjuvant: /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/gate_weight/qwen3_1_7B_version/adjuvant_prototypes.pt
+  # material: /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/gate_weight/qwen3_1_7B_version/material_prototypes.pt
+
+general:
+  big_model_path: /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/train_mlp_8_15/wandb/run-20250823_234715-hmp3lknx/files/checkpoint/step_920/full_weight
+  max_new_tokens: 1000
+  temperature: 0.7
+  top_p: 0.8
+  top_k: 20
+  do_sample: true
+
+adjuvant:
+  embed_key: layer_minus4_answer_tokens_embedding   # 可选：last_layer_answer_tokens_embedding / layer_minus2 / layer_minus4 / layer_minus6 / layer_minus8
+  small_model_path: /home/jovyan/lirongji/projection/llama_factory_finetune_projection/llamafactory6.29/LLaMA-Factory/LLaMA-Factory/saves/qwen3-1.7B/full/new_traindata_fullfinetune_qa_finetune_Adjuvant_QA_lr5e-6/checkpoint-1300
+  big_model_path:   /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/train_mlp_8_15/wandb/run-20250823_234715-hmp3lknx/files/checkpoint/step_920/full_weight
+  max_new_tokens_big: 3000
+  temperature_big: 0.7
+  top_p_big: 0.8
+  top_k_big: 20
+  do_sample_big: true
+  max_new_tokens_small: 1024
+  temperature_small: 0.7
+  top_p_small: 0.8
+  top_k_small: 20
+
+material:
+  embed_key: layer_minus4_answer_tokens_embedding   # 可选：last_layer_answer_tokens_embedding / layer_minus2 / layer_minus4 / layer_minus6 / layer_minus8
+  small_model_path: /home/jovyan/lirongji/projection/llama_factory_finetune_projection/llamafactory6.29/LLaMA-Factory/LLaMA-Factory/saves/material_domain/qwen3-1.7B/material_train_SFT/checkpoint-312
+  big_model_path:   /home/jovyan/lirongji-2/projection/MinerU/material_code/train_projector/wandb/run-20251124_053208-a9z7w1v9/files/checkpoint/step_last/full_weight
+  max_new_tokens_big: 3000
+  temperature_big: 0.7
+  top_p_big: 0.8
+  top_k_big: 20
+  do_sample_big: true
+  max_new_tokens_small: 1024
+  temperature_small: 0.7
+  top_p_small: 0.8
+  top_k_small: 20

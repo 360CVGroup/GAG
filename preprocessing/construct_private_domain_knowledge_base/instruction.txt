@@ -1,0 +1,2 @@
+# Or specify vlm backend for parsing
+mineru -p /home/jovyan/projection/MinerU/material_code/vsrag/MinerU_extract_markdown/pdf_files_all_in_one_portfolio -o /home/jovyan/projection/MinerU/material_code/vsrag/MinerU_extract_markdown/mineru_extract_result_markdown -b vlm-vllm-engine -l en
