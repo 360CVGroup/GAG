@@ -1,0 +1,47 @@
+workdir: .
+train_file: outputs/adjuvant_domain/rebalanced_bertscore/background_embeddings/adjuvant_train_backgrounds.pkl
+dev_file:
+output_dir: outputs/adjuvant_domain/rebalanced_bertscore/stageII/adjuvant_gag
+model_name_or_path: models/Qwen3-8B
+chat_format: qwen3
+max_seq_length: 2048
+per_device_train_batch_size: 1
+learning_rate: 0.00005
+weight_decay: 0.0
+num_train_epochs: 8
+max_train_steps: 1800
+gradient_accumulation_steps: 8
+lr_scheduler_type: linear
+warmup_ratio: 0.1
+logging_steps: 10
+checkpointing_steps: "100"
+clip_grad_norm: 1.0
+seed: 980406
+use_flash_attn: false
+gradient_checkpointing: false
+update_projector_only: true
+projector_type: gated_residual
+retriever_hidden_size: 2048
+layer_keys:
+  - last
+  - minus2
+  - minus4
+  - minus6
+num_memory_slots: 4
+slot_pooling: segment_softmax
+slot_pooling_temperature: 1.0
+instruction_text: |
+  You are an expert in immunology and adjuvant, with a strong background in vaccine development. Your research and practice in this field have equipped you with a deep understanding of the mechanisms of immune response and how to optimize vaccine efficacy through adjuvants. You excel in providing concise, precise, and professional responses to questions related to adjuvants and immunology.
+request_text: |
+  Please answer the following question based on the knowledge provided.
+alpha_nll: 1.0
+alpha_semantic: 0.01
+alpha_diversity: 0.001
+use_layer_mix: true
+layer_mix_logit_clamp: 10.0
+memory_slot_dropout: 0.0
+semantic_model_name_or_path: models/scibert_scivocab_uncased
+semantic_max_length: 512
+report_to_wandb: false
+wandb_project: GAG_adjuvant_stageII_rebalanced_bertscore
+wandb_run_name: adjuvant_gag_rebalanced_bertscore

@@ -1,0 +1,27 @@
+workdir: .
+train_path: datasets/materials_domain/RSC_3661_refined_train.jsonl
+model_name_or_path: outputs/materials_domain/dapt/qwen3_1.7b_material_cpt
+output_dir: outputs/materials_domain/stageI_expert/material_qwen3_1.7b_sft
+eval_path: datasets/materials_domain/RSC_646_refined_dev.jsonl
+max_seq_length: 2048
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-6
+weight_decay: 0.0
+num_train_epochs: 3
+warmup_ratio: 0.03
+logging_steps: 10
+eval_strategy: steps
+eval_steps: 50
+save_steps: 50
+save_strategy: steps
+save_total_limit: 2
+bf16: true
+gradient_checkpointing: true
+seed: 980406
+validation_split_ratio: 0.0
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+greater_is_better: false
+max_samples:
+report_to: none

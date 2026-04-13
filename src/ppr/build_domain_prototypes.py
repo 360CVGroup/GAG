@@ -1,4 +1,3 @@
-# src/router/build_domain_prototypes.py
 import os
 import json
 import argparse
@@ -29,9 +28,9 @@ def load_questions_from_jsonl(path: str, question_field: str = "question") -> Li
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--encoder_name_or_path", type=str, default="/home/jovyan/lirongji-2/models/Qwen3-1.7B")
-    parser.add_argument("--input_jsonl", type=str, default="/home/jovyan/lirongji-2/projection/paper/acl_paper_for_supplementary_materials/GAG/data/build_prototypes/adjuvant_mini.jsonl")
-    parser.add_argument("--output_path", type=str, default="/home/jovyan/lirongji-2/projection/paper/acl_paper_for_supplementary_materials/GAG/saves/prototypes/adjuvant_prototypes.pt")
+    parser.add_argument("--encoder_name_or_path", type=str, required=True)
+    parser.add_argument("--input_jsonl", type=str, required=True)
+    parser.add_argument("--output_path", type=str, required=True)
     parser.add_argument("--domain_name", type=str, default="adjuvant")
     parser.add_argument("--question_field", type=str, default="question")
     parser.add_argument("--max_seq_length", type=int, default=1024)
@@ -96,34 +95,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# # 通用领域
-# python -m src.ppr.build_domain_prototypes \
-#   --encoder_name_or_path /home/jovyan/lirongji-2/models/Qwen3-1.7B \
-#   --input_jsonl /path/to/general_qa_mix.jsonl \
-#   --domain_name general \
-#   --output_path /path/to/prototypes/general_prototypes.pt
-
-# # 佐剂
-# python -m src.ppr.build_domain_prototypes \
-#   --encoder_name_or_path /home/jovyan/lirongji-2/models/Qwen3-1.7B \
-#   --input_jsonl /path/to/adjuvant_train.jsonl \
-#   --domain_name adjuvant \
-#   --output_path /path/to/prototypes/adjuvant_prototypes.pt
-
-# # 材料
-# python -m src.ppr.build_domain_prototypes \
-#   --encoder_name_or_path /home/jovyan/lirongji-2/models/Qwen3-1.7B \
-#   --input_jsonl /path/to/material_train.jsonl \
-#   --domain_name material \
-#   --output_path /path/to/prototypes/material_prototypes.pt
-
-
-# python -m src.ppr.build_domain_prototypes --input_jsonl /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/eval_PPR_6_domains/processed_dataset/aviationQA.jsonl --output_path /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/gate_weight/qwen3_1_7B_version/aviation_prototypes.pt --domain_name aviation
-
-
-# python -m src.ppr.build_domain_prototypes --input_jsonl /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/eval_PPR_6_domains/processed_dataset/housingqa_train.jsonl --output_path /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/gate_weight/qwen3_1_7B_version/law_prototypes.pt --domain_name law
-
-
-# python -m src.ppr.build_domain_prototypes --input_jsonl /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/eval_PPR_6_domains/processed_dataset/gsm8k.jsonl --output_path /home/jovyan/lirongji-2/projection/MinerU/adjuvant_code/7.20_pipeline_code/prototype_based_plug_and_play_router_11_30/gate_weight/qwen3_1_7B_version/math_prototypes.pt --domain_name math

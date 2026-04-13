@@ -1,0 +1,9 @@
+workdir: .
+input_file: outputs/adjuvant_domain/rebalanced_bertscore/eval/adjuvant_gag_answers.jsonl
+output_file: outputs/adjuvant_domain/rebalanced_bertscore/eval/adjuvant_gag_answers_with_metrics.jsonl
+prediction_key: Qwen3-8B_answer
+reference_key: output
+compute_sts: true
+bertscore_model_path: models/scibert_scivocab_uncased
+sentence_model_path: models/all-mpnet-base-v2
+bertscore_num_layers: 8

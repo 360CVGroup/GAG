@@ -1,186 +1,126 @@
-## built-in
-import argparse,json,os
-import time
-## third party
-from transformers import (
-    Qwen3ForCausalLM,
-    AutoModelForCausalLM,
-    AutoTokenizer,
-    AutoConfig,
-)
-import torch
-import datasets
-from tqdm import tqdm
-import pandas as pd
+import argparse
+import os
 
-## own
-from src.model import (
-    XQwen3ForCausalLM,
-)
-from src.language_modeling.utils import (
-    GAG_TOKEN,
-    get_yaml_file,
-)
-from src.eval.oracle_gag.utils import (
-    llm_for_open_generation,
-    save_with_answers,
-)
-from src.eval.oracle_gag.preprocessing import(
-    load_data,
-    prepare_prompts,
-)
+from transformers import AutoConfig, AutoTokenizer
+
+from src.eval.oracle_gag.preprocessing import load_data, prepare_prompts
+from src.eval.oracle_gag.utils import llm_for_open_generation, save_with_answers
+from src.language_modeling.memory_utils import normalize_layer_keys
+from src.language_modeling.utils import GAG_TOKEN, get_yaml_file, resolve_path
+from src.model import XQwen3ForCausalLM
+
+
+def resolve_model_class(config):
+    architecture = None
+    if getattr(config, "architectures", None):
+        architecture = config.architectures[0]
+
+    if architecture in (None, "XQwen3ForCausalLM", "Qwen3ForCausalLM"):
+        return XQwen3ForCausalLM
+    raise ValueError(f"Unsupported architecture for GAG evaluation: {architecture}")
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--config",
-        type=str,
-        required=True,
-        help="config file to launch the eval"
-    )
-    parser.add_argument(
-        "--data_path",
-    )
-    parser.add_argument(
-        "--output_file_path",
-        type=str,
-        help="jsonl file with Qwen3-8B answer based on small model's background"
-    )
-    parser.add_argument(
-        "--enable_progress_bar",
-        type=eval,
-        default=True,
-    )
-
-    parser.add_argument(
-        "--model_name_or_path",
-        type=str,
-        help="large language model(with finetuned projector)'s path"
-    )
-    parser.add_argument(
-        "--retrieval_embed_length",
-        type=int,default=1,
-    )
-    parser.add_argument(
-        "--max_test_samples",
-        type=int,
-        help="for debug",
-    )
-    # parser.add_argument(
-    #     "--save_dir",
-    # )
-    parser.add_argument(
-        "--eval_batch_size",
-        type=int,
-        default=4,
-    )
-    parser.add_argument(
-        "--chat_format",
-        default='qwen3',
-    )
-    parser.add_argument(
-        "--embed_key",
-        type=str,
-        default=None,
-    )
+    parser.add_argument("--config", type=str, required=True)
+    parser.add_argument("--workdir", type=str, default=None)
+    parser.add_argument("--data_path", type=str, default=None)
+    parser.add_argument("--output_file_path", type=str, default=None)
+    parser.add_argument("--model_name_or_path", type=str, default=None)
+    parser.add_argument("--eval_batch_size", type=int, default=None)
+    parser.add_argument("--chat_format", type=str, default=None)
+    parser.add_argument("--enable_progress_bar", type=eval, default=None)
+    parser.add_argument("--max_test_samples", type=int, default=None)
+    parser.add_argument("--layer_keys", nargs="*", default=None)
+    parser.add_argument("--embed_key", type=str, default=None)
+    parser.add_argument("--num_memory_slots", type=int, default=None)
+    parser.add_argument("--slot_pooling", type=str, default=None)
+    parser.add_argument("--slot_pooling_temperature", type=float, default=None)
+    parser.add_argument("--instruction_text", type=str, default=None)
+    parser.add_argument("--request_text", type=str, default=None)
+    parser.add_argument("--do_sample_big", type=eval, default=None)
+    parser.add_argument("--max_new_tokens", type=int, default=None)
+    parser.add_argument("--temperature", type=float, default=None)
+    parser.add_argument("--top_p", type=float, default=None)
+    parser.add_argument("--top_k", type=int, default=None)
     args = parser.parse_args()
 
     yaml_config = get_yaml_file(args.config)
+    for key, value in yaml_config.items():
+        if getattr(args, key, None) is None:
+            setattr(args, key, value)
 
-    ## priority: CLI > YAML (with all default value set to None in argument parser)
-    for k,v in yaml_config.items():
-        assert hasattr(args,k), f"{k} not in parsed arguments"
-        if getattr(args,k) is None:
-            setattr(args,k,v)
-
-    if args.embed_key is None:
-        args.embed_key = "last_layer_answer_tokens_embedding"
-
+    if args.embed_key and not args.layer_keys:
+        args.layer_keys = [args.embed_key]
+    args.layer_keys = normalize_layer_keys(args.layer_keys)
+    args.workdir = resolve_path(None, args.workdir or os.path.dirname(os.path.abspath(args.config)))
+    args.data_path = resolve_path(args.workdir, args.data_path)
+    args.output_file_path = resolve_path(args.workdir, args.output_file_path)
+    args.model_name_or_path = resolve_path(args.workdir, args.model_name_or_path)
     return args
 
 
 def main():
     args = parse_args()
 
-    ## load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(
         args.model_name_or_path,
-        padding_side = 'left',
-        add_eos_token=False, ## import to include this!
+        padding_side="left",
+        add_eos_token=False,
         use_fast=False,
+        trust_remote_code=True,
     )
-    if tokenizer.pad_token:   # my own: '<|endoftext|>'
-        pass
-    elif tokenizer.unk_token:
-        tokenizer.pad_token_id = tokenizer.unk_token_id
-    elif tokenizer.eos_token:
-        tokenizer.pad_token_id = tokenizer.eos_token_id
-    
-    ## load retriever and retriever_tokenizer
-    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-    retriever_hidden_size = 2048    
-    retriever,retriever_tokenizer = None,None
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
 
-    test_data = load_data(      # List[Dict[str, Any]]
-        args.data_path,
-    )
-
+    test_data = load_data(args.data_path)
     if args.max_test_samples is not None:
-        test_data = test_data[:args.max_test_samples]
+        test_data = test_data[: args.max_test_samples]
 
-    prompts,backgrounds = prepare_prompts(    # my own： prompts: List[string]   backgrounds: List[torch.tensor]   # backgrounds : List[一个形状为1,length,2048的张量, 一个形状为1,length,2048的张量, 一个形状为1,length,2048的张量……]
-        test_data = test_data,
-        tokenizer = tokenizer,
-        chat_format = args.chat_format, 
-        embed_key=args.embed_key,    # ★新增
-    )        
-    assert len(prompts) == len(backgrounds)
+    prompts, backgrounds = prepare_prompts(
+        test_data=test_data,
+        tokenizer=tokenizer,
+        chat_format=args.chat_format,
+        layer_keys=args.layer_keys,
+        num_memory_slots=args.num_memory_slots,
+        slot_pooling=args.slot_pooling,
+        slot_pooling_temperature=args.slot_pooling_temperature,
+        instruction_text=args.instruction_text,
+        request_text=args.request_text,
+    )
 
-    retrieval_embeds = None
-
-    # backgrounds List[List[String]]
-    num_samples = len(backgrounds)
-
-    retrieval_embeds = [[] for _ in range(num_samples)]
-    for id,embeds in enumerate(backgrounds, start=0):
-        retrieval_embeds[id].append(embeds)
-
-    avg_prompt_length = tokenizer(prompts,return_length=True).length      # len(prompts) = 200  len(avg_prompt_length) = 200
-    avg_prompt_length = sum(avg_prompt_length)/len(avg_prompt_length)     # 48.15
-
-    ## load llm
-    config = AutoConfig.from_pretrained(args.model_name_or_path)
-    MODEL_CLASS = eval(config.architectures[0])
-    model = MODEL_CLASS.from_pretrained(
+    config = AutoConfig.from_pretrained(args.model_name_or_path, trust_remote_code=True)
+    model_class = resolve_model_class(config)
+    model = model_class.from_pretrained(
         args.model_name_or_path,
-        torch_dtype = torch.bfloat16,
-        low_cpu_mem_usage = True,
-    ).to(device)
-    
+        torch_dtype="auto",
+        low_cpu_mem_usage=True,
+        device_map="auto",
+        trust_remote_code=True,
+    )
     model.eval()
-    # model = model.to(device)
-    assert GAG_TOKEN in tokenizer.get_vocab() 
     model.set_gag_token_id(tokenizer.convert_tokens_to_ids(GAG_TOKEN))
 
-    generated_results = llm_for_open_generation(    # len(generated_results) = 200
-        llm = model,
-        llm_tokenizer = tokenizer,
-        prompts = prompts,    # my own: len(prompts): 3559
-        retrieval_embeds = retrieval_embeds,       # len(retrieval_embeds) = 200        retrieval_embeds[0][0].shape = torch.Size([4096])
-                                                   # my own: [[一个形状为1,length,2048的张量],[],[]……]  len(retrieval_embeds) = 3559
-        batch_size = args.eval_batch_size,     # 4 
-        enable_progress_bar= args.enable_progress_bar,    # true
+    generated_results = llm_for_open_generation(
+        llm=model,
+        llm_tokenizer=tokenizer,
+        prompts=prompts,
+        retrieval_embeds=backgrounds,
+        batch_size=args.eval_batch_size,
+        enable_progress_bar=args.enable_progress_bar,
+        do_sample=args.do_sample_big,
+        max_new_tokens=args.max_new_tokens,
+        temperature=args.temperature,
+        top_p=args.top_p,
+        top_k=args.top_k,
     )
-    
-    assert len(generated_results) == num_samples
 
     save_with_answers(
-        test_data = test_data,
-        generated_results = generated_results,
-        output_file_path = args.output_file_path,
+        test_data=test_data,
+        generated_results=generated_results,
+        output_file_path=args.output_file_path,
     )
 
-    
+
 if __name__ == "__main__":
     main()

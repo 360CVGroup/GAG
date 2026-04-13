@@ -1,0 +1,22 @@
+workdir: .
+data_path: outputs/materials_domain/background_embeddings/material_test_backgrounds.pkl
+output_file_path: outputs/materials_domain/eval/material_gag_answers.jsonl
+model_name_or_path: outputs/materials_domain/stageII/material_gag/last/full_weight
+eval_batch_size: 4
+chat_format: qwen3
+enable_progress_bar: true
+layer_keys:
+  - last
+  - minus2
+  - minus4
+  - minus6
+num_memory_slots: 4
+slot_pooling: segment_softmax
+slot_pooling_temperature: 1.0
+instruction_text: |
+  You are an expert in materials science and engineering, with extensive experience in the design, synthesis, and characterization of functional materials. Your research and practice have equipped you with a deep understanding of structure-property relationships, reaction mechanisms, and performance optimization strategies. You excel in providing concise, precise, and professional responses to questions related to materials design, processing, and applications.
+do_sample_big: false
+max_new_tokens: 640
+temperature: 0.7
+top_p: 0.8
+top_k: 20

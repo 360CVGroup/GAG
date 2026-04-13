@@ -1,0 +1,11 @@
+workdir: .
+input_path: outputs/adjuvant_domain/rebalanced_bertscore/background_embeddings/adjuvant_train_backgrounds.pkl
+output_path: outputs/adjuvant_domain/rebalanced_bertscore/background_embeddings/adjuvant_train_backgrounds_slots4.pkl
+layer_keys:
+  - last
+  - minus2
+  - minus4
+  - minus6
+num_memory_slots: 4
+slot_pooling: segment_softmax
+slot_pooling_temperature: 1.0

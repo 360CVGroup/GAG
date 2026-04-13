@@ -1,0 +1,77 @@
+data_path: datasets/mixed_domain/online/general_and_adjuvant_and_materials.jsonl
+output_file_path: outputs/mixed_domain/ppr/routed_eval_general_materials_adjuvant.jsonl
+
+router_encoder_name_or_path: models/Qwen3-1.7B
+router_device: cpu
+router_max_seq_length: 256
+prototype_files:
+  general: outputs/ppr/prototypes/general.pt
+  adjuvant: outputs/ppr/prototypes/adjuvant.pt
+  materials: outputs/ppr/prototypes/materials.pt
+
+general:
+  model_name_or_path: models/Qwen3-8B
+  device: cuda:0
+  instruction_text: You are a helpful assistant.
+  request_text: Please answer the following question.
+  do_sample: false
+  max_new_tokens: 512
+  temperature: 0.7
+  top_p: 0.8
+  top_k: 20
+  repetition_penalty: 1.05
+  no_repeat_ngram_size: 3
+
+adjuvant:
+  small_model_name_or_path: outputs/adjuvant_domain/rebalanced_bertscore/stageI_expert/adjuvant_qwen3_1.7b_sft
+  big_model_name_or_path: outputs/adjuvant_domain/rebalanced_bertscore/stageII/adjuvant_gag/last/full_weight
+  small_device: cuda:0
+  big_device: cuda:0
+  background_system_prompt: |
+    You are an expert in immunology and adjuvant, with a strong background in vaccine development. Your research and practice in this field have equipped you with a deep understanding of the mechanisms of immune response and how to optimize vaccine efficacy through adjuvants. You excel in providing relevant and professional background knowledge that can help answer the question. Please provide the background knowledge related to the following question.
+  instruction_text: |
+    You are an expert in immunology and adjuvant, with a strong background in vaccine development. Your research and practice in this field have equipped you with a deep understanding of the mechanisms of immune response and how to optimize vaccine efficacy through adjuvants. You excel in providing concise, precise, and professional responses to questions related to adjuvants and immunology.
+  request_text: Please answer the following question based on the knowledge provided.
+  layer_keys: [last, minus2, minus4, minus6]
+  num_memory_slots: 4
+  slot_pooling: segment_softmax
+  slot_pooling_temperature: 1.0
+  do_sample_small: false
+  max_new_tokens_small: 640
+  temperature_small: 0.7
+  top_p_small: 0.8
+  top_k_small: 20
+  do_sample_big: false
+  max_new_tokens_big: 512
+  temperature_big: 0.7
+  top_p_big: 0.8
+  top_k_big: 20
+  repetition_penalty: 1.05
+  no_repeat_ngram_size: 3
+
+materials:
+  small_model_name_or_path: outputs/materials_domain/stageI_expert/material_qwen3_1.7b_sft
+  big_model_name_or_path: outputs/materials_domain/stageII/material_gag/last/full_weight
+  small_device: cuda:1
+  big_device: cuda:1
+  background_system_prompt: |
+    You are an expert in materials science and engineering. Your research and practice have equipped you with a deep understanding of how composition, structure, processing and environment determine material properties and performance. You excel in providing relevant and professional background knowledge that can help answer research-level questions in this field. Please provide the background knowledge related to the following question. Do not fabricate specific numerical data that is not generally known in the field.
+  instruction_text: |
+    You are an expert in materials science and engineering, with extensive experience in the design, synthesis, and characterization of functional materials. Your research and practice have equipped you with a deep understanding of structure-property relationships, reaction mechanisms, and performance optimization strategies. You excel in providing concise, precise, and professional responses to questions related to materials design, processing, and applications.
+  request_text: Please answer the following question based on the knowledge provided.
+  layer_keys: [last, minus2, minus4, minus6]
+  num_memory_slots: 4
+  slot_pooling: segment_softmax
+  slot_pooling_temperature: 1.0
+  do_sample_small: false
+  max_new_tokens_small: 768
+  temperature_small: 0.7
+  top_p_small: 0.8
+  top_k_small: 20
+  do_sample_big: false
+  max_new_tokens_big: 512
+  temperature_big: 0.7
+  top_p_big: 0.8
+  top_k_big: 20
+  repetition_penalty: 1.05
+  no_repeat_ngram_size: 3

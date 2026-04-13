@@ -1,0 +1,24 @@
+workdir: .
+input_path: datasets/materials_domain/RSC_646_refined_dev.jsonl
+output_path: outputs/materials_domain/background_embeddings/material_test_backgrounds.pkl
+small_model_name_or_path: outputs/materials_domain/stageI_expert/material_qwen3_1.7b_sft
+question_key: input
+answer_key: output
+instruction_key: instruction
+default_instruction: |
+  You are an expert in materials science and engineering. Based on the given question, provide a rigorous, well-structured, and professional answer.
+background_system_prompt: |
+  You are an expert in materials science and engineering. Your research and practice have equipped you with a deep understanding of how composition, structure, processing and environment determine material properties and performance. You excel in providing relevant and professional background knowledge that can help answer research-level questions in this field. Please provide the background knowledge related to the following question. Do not fabricate specific numerical data that is not generally known in the field.
+layer_keys:
+  - last
+  - minus2
+  - minus4
+  - minus6
+  - minus8
+max_new_tokens: 768
+do_sample: false
+temperature: 0.7
+top_p: 0.8
+top_k: 20
+resume: true
+trust_remote_code: true

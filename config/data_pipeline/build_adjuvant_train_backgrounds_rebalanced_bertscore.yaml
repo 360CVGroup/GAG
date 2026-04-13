@@ -1,0 +1,24 @@
+workdir: .
+input_path: datasets/adjuvant_domain/adjuvant_rebalanced_train_21614.jsonl
+output_path: outputs/adjuvant_domain/rebalanced_bertscore/background_embeddings/adjuvant_train_backgrounds.pkl
+small_model_name_or_path: outputs/adjuvant_domain/rebalanced_bertscore/stageI_expert/adjuvant_qwen3_1.7b_sft
+question_key: input
+answer_key: output
+instruction_key: instruction
+default_instruction: |
+  You are an expert in immunology and adjuvant, with a strong background in vaccine development. Your research and practice in this field have equipped you with a deep understanding of the mechanisms of immune response and how to optimize vaccine efficacy through adjuvants. You excel in providing relevant and professional background knowledge that can help answer the question. Please provide the background knowledge related to the following question.
+background_system_prompt: |
+  You are an expert in immunology and adjuvant, with a strong background in vaccine development. Your research and practice in this field have equipped you with a deep understanding of the mechanisms of immune response and how to optimize vaccine efficacy through adjuvants. You excel in providing relevant and professional background knowledge that can help answer the question. Please provide the background knowledge related to the following question.
+layer_keys:
+  - last
+  - minus2
+  - minus4
+  - minus6
+  - minus8
+max_new_tokens: 640
+do_sample: false
+temperature: 0.7
+top_p: 0.8
+top_k: 20
+resume: true
+trust_remote_code: true
