@@ -159,7 +159,7 @@ If you find this work helpful, please cite the paper:
 ```bibtex
 @article{li2026generation,
   title={Generation-Augmented Generation: A Plug-and-Play Framework for Private Knowledge Injection in Large Language Models},
-  author={Li, Rongji and Xu, Jian and Chen, Xueqing and Yang, Yisheng and Wang, Jiayi and Chen, Xingyu and Xie, Chunyu and Leng, Dawei and Zhang, Xu-Yao},
+  author={Li, Rongji and Xu, Jian and Chen, Yi and Chen, Xueqing and Yang, Yisheng and Wang, Jiayi and Chen, Xingyu and Xie, Chunyu and Leng, Dawei and Zhang, Xu-Yao},
   journal={arXiv preprint arXiv:2601.08209},
   year={2026}
 }
